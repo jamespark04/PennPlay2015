@@ -70,6 +70,7 @@
      <Compile Include="Assets\Monster\scripts\monstercontroller.js" />
      <Compile Include="Assets\Monster\scripts\playrandomsound.js" />
      <Compile Include="Assets\Monster\scripts\wait&amp;destroy.js" />
+     <Compile Include="Assets\Scripts\NewGameScript.js" />
      <None Include="Assets\Monster\shaders\vertexAnim.shader" />
      <None Include="Assets\Monster\shaders\bumpSpecmap.shader" />
      <None Include="Assets\Monster\shaders\metalA.shader" />

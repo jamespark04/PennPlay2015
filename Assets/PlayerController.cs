@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	void Move(float h, float v) {
-		movement.Set (h, 0f, v);
+		movement.Set (0f, 0f, v);
 
 		movement = transform.TransformDirection(movement.normalized) * speed * Time.deltaTime;
 		
