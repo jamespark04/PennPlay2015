@@ -46,6 +46,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CubeController.cs" />
+     <Compile Include="Assets\CubeManager.cs" />
+     <Compile Include="Assets\HealthCubeController.cs" />
      <Compile Include="Assets\MobileInput\Scripts\CrossPlatformInputManager.cs" />
      <Compile Include="Assets\MobileInput\Scripts\Joystick.cs" />
      <Compile Include="Assets\MobileInput\Scripts\MobileControlRig.cs" />

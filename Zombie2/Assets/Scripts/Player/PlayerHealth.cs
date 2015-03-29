@@ -11,8 +11,10 @@ public class PlayerHealth : MonoBehaviour
 	public AudioClip deathClip;
 	public float flashSpeed = 5f;
 	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
-	public bool invinsible = true;
-	
+	public bool invinsible = false;
+	private float timeInvincible = 2f;
+	float timer;
+	public int killNumber = 0;
 	
 	Animator anim;
 	AudioSource playerAudio;
@@ -34,6 +36,15 @@ public class PlayerHealth : MonoBehaviour
 	
 	void Update ()
 	{
+		timer += Time.deltaTime;
+		if (!invinsible) {
+			timer = 0f;
+		} else {
+			if (timer >= timeInvincible) {
+				timer = 0f;
+				invinsible = false;
+			}
+		}
 		if(damaged)
 		{
 			damageImage.color = flashColour;
