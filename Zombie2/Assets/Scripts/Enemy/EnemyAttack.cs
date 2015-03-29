@@ -5,14 +5,14 @@ public class EnemyAttack : MonoBehaviour
 {
 	public float timeBetweenAttacks = 0.5f;
 	public int attackDamage = 10;
-	
-	
+
 	Animator anim;
 	public GameObject player;
 	PlayerHealth playerHealth;
 	EnemyHealth enemyHealth;
 	bool playerInRange;
 	float timer;
+
 	
 	
 	void Awake ()
@@ -21,6 +21,7 @@ public class EnemyAttack : MonoBehaviour
 		playerHealth = player.GetComponent <PlayerHealth> ();
 		enemyHealth = GetComponent<EnemyHealth>();
 		anim = GetComponent <Animator> ();
+
 	}
 	
 	
@@ -50,6 +51,7 @@ public class EnemyAttack : MonoBehaviour
 
 			enemyHealth.currentHealth = 0;
 			playerHealth.killNumber++;
+			playerHealth.kill.text = "Kill: " + playerHealth.killNumber;
 		} else if(timer >= timeBetweenAttacks && playerInRange && enemyHealth.currentHealth > 0)
 		{
 			Attack ();

@@ -6,8 +6,7 @@ namespace CompleteProject
 {
     public class ScoreManager : MonoBehaviour
     {
-        public static int score;        // The player's score.
-
+        public static int score = 0;        // The player's score.
 
         Text text;                      // Reference to the Text component.
 
@@ -18,7 +17,6 @@ namespace CompleteProject
             text = GetComponent <Text> ();
 
             // Reset the score.
-            score = 0;
         }
 
 

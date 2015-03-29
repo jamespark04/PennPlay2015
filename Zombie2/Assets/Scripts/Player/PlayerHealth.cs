@@ -15,6 +15,7 @@ public class PlayerHealth : MonoBehaviour
 	private float timeInvincible = 2f;
 	float timer;
 	public int killNumber = 0;
+	public Text kill;
 	
 	Animator anim;
 	AudioSource playerAudio;
@@ -64,7 +65,7 @@ public class PlayerHealth : MonoBehaviour
 		currentHealth -= amount;
 		
 		healthSlider.value = currentHealth;
-		
+
 		playerAudio.Play ();
 		
 		if(currentHealth <= 0 && !isDead)

@@ -20,12 +20,14 @@ public class GameOverManager : MonoBehaviour
     {
         if (playerHealth.currentHealth <= 0)
         {
+			playerHealth.kill.text = "";
+			playerHealth.killNumber = 0;
             anim.SetTrigger("GameOver");
 
 			restartTimer += Time.deltaTime;
 
 			if (restartTimer >= restartDelay) {
-				Application.LoadLevel("Level01");
+				Application.LoadLevel("TitleScene");
 			}
         }
     }
