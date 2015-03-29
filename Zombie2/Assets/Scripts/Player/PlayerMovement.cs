@@ -2,6 +2,7 @@
 
 public class PlayerMovement : MonoBehaviour {
 	public float speed = 6f;
+	//private bool isFalling = false;
 	
 	Vector3 movement;
 	Animator anim;
@@ -25,8 +26,14 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 	void Move(float h, float v) {
-		movement.Set (h, 0f, v);
 
+		movement.Set (h, 0f, v);
+		/*
+		if (transform.position.x > 10 || transform.position.z > 10 ) {
+			movement.Set (h, -10f, v);
+			//isFalling = true;
+		}
+		*/
 		movement = transform.TransformDirection(movement.normalized) * speed * Time.deltaTime;
 		
 		playerRigidbody.MovePosition (transform.position + movement);
